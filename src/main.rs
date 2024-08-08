@@ -45,6 +45,8 @@ enum CTypeCmd {
     Gzip,
     /// Snappy compression
     Snappy,
+    /// Zlib compression
+    Zlib,
 }
 
 impl From<CTypeCmd> for CType {
@@ -53,6 +55,7 @@ impl From<CTypeCmd> for CType {
             CTypeCmd::Raw => Self::Raw,
             CTypeCmd::Gzip => Self::Gzip,
             CTypeCmd::Snappy => Self::Snappy,
+            CTypeCmd::Zlib => Self::Zlib,
         }
     }
 }
